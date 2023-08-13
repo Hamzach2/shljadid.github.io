@@ -1,0 +1,357 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/me.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <title>Document</title>
+</head>
+<body class="bg-[#eaeaea]">
+  <style>
+    .image1{
+      height: 400px;    
+      object-fit: cover;
+    }
+    .swiper-container{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        height: 400px;
+      
+        
+    }
+    @media (min-width:1220px) {
+      .swiper-container{
+        clip-path: polygon(100% 0 , 100% 100% , 0 100% , 15% 0 );
+      }
+      
+    }
+    .swiper-container {
+        left: 0px;
+    }
+    .swiper-container {
+      top: 0;
+      right: 0;
+    }
+    .sample-slider img{
+        width: 100%;
+    }
+  .swiper-button-next {
+    color: white;
+    top: 90%;
+    right: 40%;
+  }
+  .swiper-button-prev{
+    color: white;
+    top: 90%;
+    left: 40%;
+  }
+</style>
+
+  <div class="flex justify-center">
+
+  
+    <header class="fixed w-2/3 shadow-black-400 top-0 z-10  mt-6  bg-white bg-opacity-80 p-4 shadow-2xl border-2 border-red-300">
+      <img src="images/SH-LOGO.png" class="w-12 absolute" alt="">
+      
+      <nav >
+        <!-- component -->
+<!-- This is an example component -->
+<div class="max-w-2xl mx-auto">
+    
+  <nav class="border-gray-200">
+  <div class="container mx-auto flex flex-wrap items-center lg:justify-center justify-between">
+      <a href="#" class="flex">
+      <!-- <svg class="h-10 mr-3" width="51" height="70" viewBox="0 0 51 70" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M1 53H27.9022C40.6587 53 51 42.7025 51 30H24.0978C11.3412 30 1 40.2975 1 53Z" fill="#76A9FA"></path><path d="M-0.876544 32.1644L-0.876544 66.411C11.9849 66.411 22.4111 55.9847 22.4111 43.1233L22.4111 8.87674C10.1196 8.98051 0.518714 19.5571 -0.876544 32.1644Z" fill="#A4CAFE"></path><path d="M50 5H23.0978C10.3413 5 0 15.2975 0 28H26.9022C39.6588 28 50 17.7025 50 5Z" fill="#1C64F2"></path></g><defs><clipPath id="clip0"><rect width="51" height="70" fill="white"></rect></clipPath></defs></svg> -->
+          <!-- <span class="self-center text-lg font-semibold whitespace-nowrap">FlowBite</span> -->
+      </a>
+      <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" fill="#00000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+      <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+          <li>
+          <a href="#" class="bg-red-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-red-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-red-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Products<svg class="w-4 h-4 ml-1  " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                  <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                  <li>
+                      <a href="acce.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Accessories</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Scooters</a>
+                  </li>
+                  <!-- <li>
+                      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
+                  </li>
+                  </ul>
+                  <div class="py-1">
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+                  </div> -->
+              </div>
+          </li>
+          <li>
+          <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-red-700 md:p-0">Abous us</a>
+          </li>
+          <!-- <li>
+          <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+          </li> -->
+          <li>
+          <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+          </li>
+      </ul>
+      </div>
+  </div>
+  </nav>
+</div>
+  <!-- <p class="mt-5">This dropdown navbar element is part of a larger, open-source library of Tailwind CSS components. Learn more by going to the official <a class="text-blue-600 hover:underline" href="#" target="_blank">Flowbite Documentation</a>.</p>
+</div> -->
+ 
+<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+        <!-- <div class="flex items-center justify-center">
+          <ul class="flex space-x-4">
+            <a href="#">
+            <li class="text-black font-semibold hover:text-red-500">Home</li></a>
+            <div class="dropdown inline-block">
+              <a href=""><li class="dropbtn border-0 text-base text-black">Products</li></a>
+              <div class="dropdown-content absolute z-10 hidden min-w-[160px] rounded-lg border border-solid border-red-600 bg-white shadow-md">
+                <a href="#" class="block px-4 py-3 text-center text-black hover:text-red-600">Option</a>
+                <a href="#" class="block px-4 py-3 text-center text-black hover:text-red-600">Option</a>
+                <a href="#" class="block px-4 py-3 text-center text-black hover:text-red-600">Option</a>
+              </div>
+            </div>
+            <li class="text-black font-semibold hover:text-red-500">Home</li></a>
+            <li class="text-black font-semibold hover:text-red-500">Home</li></a>
+            
+          </ul>
+        </div> -->
+      </nav>
+    </header> 
+    
+  </div> 
+        <!-- Allez Hssaine -->
+
+    </header>
+    <div class="grid lg:grid-cols-2 grid-cols-1  lg:gap-14 gap-7">
+         <div class="order-1 lg:order-none lg:ml-32 lg:mt-36  mx-10 ">
+            <h1 class="text-5xl font-bold text-red-700 ">Welcome to <br>SH-Scooters </h1>
+            <p class="text-gray-500 font-thin py-7 ">The First Morrocan Online Shop <br>Where You can find anything related <br> to electric Scooters</p>
+            <button class="  rounded-md shadow-sm shadow-red-400 bg-red-600 border-2 border-red-600 px-5 py-2.5 text-center text-sm font-medium text-white  hover:bg-white focus:outline-none hover:text-red-600 0">Start Shopping </button>
+          </div>
+          <div class="swiper-container lg:rounded-bl-3xl ">                          
+            <div class="swiper sample-slider lg:rounded-bl-3xl">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="https://images.wallpaperscraft.com/image/single/road_turn_trees_191458_1366x768.jpg" alt="" class="image1 float-right lg:rounded-bl-3xl"></div>
+                    <div class="swiper-slide"><img src="https://images.wallpaperscraft.com/image/single/road_turn_trees_191458_1366x768.jpg" alt="" class="image1 float-right lg:rounded-bl-3xl"></div>
+                      <div class="swiper-slide"><img src="https://images.wallpaperscraft.com/image/single/road_turn_trees_191458_1366x768.jpg" alt="" class="image1 float-right lg:rounded-bl-3xl"></div>  
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>              
+            <div class="swiper-button-next"></div>              
+        </div>  
+        
+     
+      
+    </div>
+      <div class="grid lg:mt-36 mt-10  gap-5 grid-cols-3">
+        <div class="h-lil lg:mx-6 mt-4 rounded-full bg-red-500"></div>
+        <h1 class="text-center lg:text-2xl font-semibold text-black">Discover Our Technologies</h1>
+        <div class="h-lil lg:mx-6 mt-4 rounded-full bg-red-500"></div>
+      </div>
+      <div class="flex flex-wrap grow place-content-center gap-1">
+<a href="#" >    
+<div class="group relative  m-10 h-96 w-96 overflow-hidden rounded-lg shadow-2xl  ">
+  <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+    <img class=" w-full" src="images/1111.png" alt="" />
+    <a href="#!">
+      
+    </a>
+  </div>  
+  <div class="p-6">
+
+    <h5 class=":text-neutral-50 mb-2 relative  bottom-20 text-2xl font-bold leading-tight text-red-600 text-center">High Speed</h5>
+    <p class=":text-neutral-200 mb-4 text-base relative bottom-10 text-neutral-600">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="button" class="w-full hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 :shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] :hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] :focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] :active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] inline-block rounded bg-red-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" data-te-ripple-init data-te-ripple-color="light">BUY</button>
+  </div>
+</div>
+</a>  
+<div class="group relative m-10 h-96 w-96 overflow-hidden rounded-lg shadow-2xl">
+  <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+    <img class=" w-full" src="images/2222.png" alt="" />
+    <a href="#!">
+      
+    </a>
+  </div>  
+  <div class="p-6">
+
+    <h5 class=":text-neutral-50 mb-2 relative  bottom-20 text-2xl font-bold leading-tight text-red-600 text-center">Foldable</h5>
+    <p class=":text-neutral-200 mb-4 text-base relative bottom-10 text-neutral-600">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="button" class="w-full rounded-full hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 :shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] :hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] :focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] :active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]  bg-red-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" data-te-ripple-init data-te-ripple-color="light">BUY</button>
+  </div>
+</div>
+<div class="group relative m-10 h-96 w-96 overflow-hidden rounded-lg shadow-2xl">
+  <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+    <img class=" w-full" src="images/3333.png" alt="" />
+    <a href="#!">
+      
+    </a>
+  </div>  
+  <div class="p-6">
+
+    <h5 class=":text-neutral-50 mb-2 relative  bottom-20 text-2xl font-bold leading-tight text-red-600 text-center">Accessories</h5>
+    <p class=":text-neutral-200 mb-4 text-base relative bottom-10 text-neutral-600">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="button" class="w-full hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 :shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] :hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] :focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] :active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] inline-block rounded bg-red-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" data-te-ripple-init data-te-ripple-color="light">BUY</button>
+  </div>
+</div>
+</div>
+<div class="relative">
+<img src="images/w9.png" class="image2 mt-32  "   alt="">
+<h1 class="absolute text-white text-4xl lg:text-5xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">Among Us</h1>
+</div>
+<div>
+  
+    <div class="mx-10 mt-10 flex-wrap  grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:py-16 lg:mx-40">
+      <div class=" font-light text-gray-500 sm:text-lg">
+        <h2 class=" mb-4 text-4xl font-extrabold tracking-tight text-blue-900">Who Are We?</h2>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dicta consequuntur fugiat, exercitationem omnis ratione beatae iure aliquam repudiandae accusantium maiores eligendi quidem minima. Ab est, sed harum accusamus rem inventore ipsa praesentium reprehenderit sint dolorum, tenetur quasi quod eos esse doloremque perferendis? Perspiciatis laborum similique, quaerat fugit itaque obcaecati doloremque labore autem, fugiat eum quo odio voluptas iste. Temporibus ipsum alias repellendus nobis quam doloribus ea vero ducimus totam suscipit explicabo magni laboriosam, tempora ab id repudiandae sunt. Quaerat sequi porro, iusto debitis ipsa fugit hic? Suscipit magni repellat nemo impedit commodi, dolorem temporibus, exercitationem voluptatem fugiat doloremque assumenda!</p>
+      </div>
+      <div class="flex justify-center lg:justify-end"> <!-- Use flex to align image to the right -->
+        <img class="lg:max-w-md  rounded-lg lg:grayscale shadow-2xl shadow-black transition-all duration-300 lg:hover:grayscale-0 lg:hover:shadow-2xl hover:shadow-black" src="images/sh bsg.png" alt="">
+      </div>
+    </div>
+
+    <!-- <div class="mx-40 grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:py-16">
+      
+   
+        <img class="max-w-md rounded-lg grayscale transition-all duration-300 hover:grayscale-0 hover:shadow-2xl hover:shadow-black" src="images/sh bsg.png" alt="">
+      
+      <div class=" font-light text-gray-500 sm:text-lg">
+        <h2 class=" mb-4 text-4xl font-extrabold tracking-tight text-blue-900">Our Company</h2>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dicta consequuntur fugiat, exercitationem omnis ratione beatae iure aliquam repudiandae accusantium maiores eligendi quidem minima. Ab est, sed harum accusamus rem inventore ipsa praesentium reprehenderit sint dolorum, tenetur quasi quod eos esse doloremque perferendis? Perspiciatis laborum similique, quaerat fugit itaque obcaecati doloremque labore autem, fugiat eum quo odio voluptas iste. Temporibus ipsum alias repellendus nobis quam doloribus ea vero ducimus totam suscipit explicabo magni laboriosam, tempora ab id repudiandae sunt. Quaerat sequi porro, iusto debitis ipsa fugit hic? Suscipit magni repellat nemo impedit commodi, dolorem temporibus, exercitationem voluptatem fugiat doloremque assumenda!</p>
+      </div>
+    </div>
+  -->
+ 
+    <section class=>
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-600">Contact Us</h2>
+          <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">  </p>
+          <form action="#" class="space-y-8">
+              <div>
+                  <label for="email" class="block mb-2 text-sm font-medium dark:text-gray-600">Your email</label>
+                  <input type="email" id="email" class="shadow-sm bg-gray-50 border border-red-700 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="Wa Hssaine@gmail.com" required>
+              </div>
+             
+              <div class="sm:col-span-2">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                  <textarea id="message" rows="6" class="block p-2.5 w-full text-sm rounded-lg shadow-sm border border-red-700 focus:ring-primary-500 focus:border-primary-500  placeholder="Leave a comment..."></textarea>
+              </div>
+              <button type="submit" class="py-3 px-5 text-sm font-medium text-center bg-red-700 text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+          </form>
+      </div>
+    </section>
+
+    
+      
+<footer class=" ">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <hr class="my-6 border-red-700 sm:mx-autolg:my-8" />
+      <div class="md:flex md:justify-between">
+        
+        <div class="grid grid-cols-2 gap-16 sm:gap-10 sm:grid-cols-3">
+            <div>
+                <h1 class="text-2xl font-bold  text-gray-900 uppercase ">Let's Keep In Touch</h1>
+                <p class="my-6 font-thin">Find Us on any of these plateforms ,we respond 1-2 business days</p>
+                <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                
+                  <button class="border border-red-700 rounded-full p-3 shadow-xl hover:shadow-xl hover:shadow-red-300">
+                  
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="#ff0000
+                    "
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                  
+                  
+                </button>
+                <button class="border border-red-700 rounded-full p-3 shadow-xl hover:shadow-xl hover:shadow-red-300">
+                  
+                  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="h-5 w-5"
+  fill="#ff0000
+  "
+  viewBox="0 0 24 24">
+  <path
+    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+</svg>
+              </button>
+              <button class="border border-red-700 rounded-full p-3 shadow-xl hover:shadow-sm hover:shadow-red-300">
+                  
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="#ff0000
+                "
+                viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+            </button>
+                 
+              </div>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold  text-gray-900 uppercase ">Help </h1>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mt-6 mb-6">
+                        <a href="#" class="hover:underline ">SPACE CLUB</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">A7SEN CLUB</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold  text-gray-900 uppercase ">Find Us</h1>
+                <p class="mt-10">wakha daba ndir map</p>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-red-700 sm:mx-autolg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">IAWAT™</a>. All Rights Reserved.
+        </span>
+        
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.sample-slider', {
+    effect: 'coverflow',
+      loop: true,                        
+      autoplay: {                         
+          delay: 2000,  
+      },   
+      navigation: {                       
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+  })
+</script>
+
+</html>
